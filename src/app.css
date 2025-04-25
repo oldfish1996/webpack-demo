@@ -1,0 +1,37 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+/* @import "tailwindcss/preflight.css" layer(base); */
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@layer base {
+  :root {
+    --color-dark: rgba(0, 0, 0, 0.8);
+    --color-light: #a1a3a6;
+    --color-greentext-500: #28b989;
+  }
+}
+
+@layer utilities {
+  .text-dark {
+    color: var(--color-dark);
+  }
+
+  .bg-gold {
+    background-color: wheat;
+  }
+
+  .text-red {
+    color: var(--color-red-50);
+  }
+}
+
+@theme {
+  --color-red-50: rgba(255, 64, 58, 0.1);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
